@@ -107,7 +107,7 @@ const WmsMapType = function ({
     ...DEFAULT_WMS_PARAMS,
   };
 
-  if (url.slice(-1) !== "?") {
+  if (url.indexOf("?") === -1) {
     url += "?";
   }
 
