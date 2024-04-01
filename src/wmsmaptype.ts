@@ -109,10 +109,8 @@ const WmsMapType = function ({
 
   if (url.indexOf("?") === -1) {
     url += "?";
-  } else {
-    if (url.indexOf("?") !== url.length - 1) {
-      url += "&";
-    }
+  } else if (url.indexOf("?") !== url.length - 1) {
+    url += "&";
   }
 
   const getTileUrl = function (coord: google.maps.Point, zoom: number): string {
